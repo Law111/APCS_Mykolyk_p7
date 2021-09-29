@@ -1,2 +1,9 @@
+Lawrence Joa
+APCS
+Prework 01
+2021-9-x
+
+Void Methods
+
 I followed along pretty well in the beginning, the adding of multiple methods within a class was new material for me, so it took a bit for me to understand.
 The wug exercise was pretty fun :)
