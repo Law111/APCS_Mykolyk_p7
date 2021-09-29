@@ -1,8 +1,6 @@
 Lawrence Joa
 APCS
-Prework 04
+Prework 04 -- Conditionals / True, False, > >= == <= < !=, If, Else, Boolean, Return, Recursion
 2021-9-x
-
-Conditionals
 
 Most of the material is familiar.
