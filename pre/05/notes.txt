@@ -1,0 +1,3 @@
+The first section that was actual trouble for me.
+It took me a while to create a working program, as in the public static portions, but the actual coding was relatively easy.
+The chapter was also pretty easy to understand.
