@@ -1,0 +1,1 @@
+Not too hard, I've been exposed to a great deal of loops before. However, I'm not too sure about the do-while loop, as I've never seen that before.
