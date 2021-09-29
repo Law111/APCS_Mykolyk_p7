@@ -1,8 +1,6 @@
 Lawrence Joa
 APCS
-Prework 08
+Prework 08 -- Practice Problems // CodingBat - Value Functions, Conditions, Loops, Arrays
 2021-9-x
-
-Practice Problems
 
 Did a good portion of them, pretty easy thankfully.
