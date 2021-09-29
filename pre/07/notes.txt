@@ -1,0 +1,3 @@
+I've been exposed to a good amount of arrays, so this wasn't too difficult to understand.
+I feel like the enhanced for loop is more confusing, so I want to stay away from using that.
+However, I couldn't do the exercises and kept getting errors, and I didn't know why.
