@@ -1,6 +1,6 @@
 Lawrence Joa
 APCS
-Prework 01
+Prework 01 -- Hello World / First Program
 2021-9-x
 
 Hello world :)
