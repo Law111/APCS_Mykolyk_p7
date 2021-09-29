@@ -1,1 +1,8 @@
-All the basic operators and math operators and such, and the concepts/ideas were not too difficult to understand.
+Lawrence Joa
+APCS
+Prework 01
+2021-9-x
+
+Data Types
+
+All the basic operators and the concepts/ideas were not too difficult to understand.
