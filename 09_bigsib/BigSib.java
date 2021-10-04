@@ -9,6 +9,6 @@ HW09 -- What Are BigSibs Good For? / Using BigSib version of Greet
 
 public class BigSib {
 	public static void greet(String str){
-		return("Why, hello there, " + str + ". How do you do?");
+		System.out.println("Why, hello there, " + str + ". How do you do?");
 	}
 }
