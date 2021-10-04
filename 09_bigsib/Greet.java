@@ -21,7 +21,7 @@ UNRESOLVED QUESTIONS:
 - When trying to git add the same file after it has already been added, this warning appears:
 '' warning: LF will be replaced by CRLF in 09_bigsib/Greet.java. ''
 '' The file will have its original line endings in your working directory ''
-What does LF and CRLF mean/represent?
+What does LF and CRLF mean/represent? test
 
 */
 
