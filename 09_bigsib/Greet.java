@@ -12,3 +12,11 @@ public class Greet {
         BigSib.greet("Kazaam");
     }
 }
+
+/*
+DISCOVERIES:
+- You can use separate java files within the same directory to execute codes
+
+UNRESOLVED QUESTIONS:
+*/
+
