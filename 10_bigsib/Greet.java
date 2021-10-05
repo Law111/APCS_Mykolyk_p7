@@ -2,7 +2,7 @@
 /*
 LIR - Lawrence Joa and Steve and John, Ivina Wang and sealie, Raven (Ruiwen) Tang and Bernard
 APCS
-HW09 -- Refactor Big Sib One / Adding System.out.println before a function
+HW10 -- Refactor Big Sib One / Adding System.out.println before a function
 2021-10-04
 */
 
