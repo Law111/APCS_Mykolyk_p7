@@ -6,7 +6,7 @@ HW10 -- Refactor Big Sib One / Adding System.out.println before a function
 */
 
 public class BigSib {
-	public static void greet(String name){
+	public static String greet(String name){
 		return(("Why, hello there, " + name + ". How do you do?");
 	}
 }
