@@ -32,8 +32,8 @@ public class Greet {
                 richard.setHelloMsg("Sup");
                 greeting = richard.greet("mom");
 		System.out.println(greeting);
-	}
-}
+	} //end main()
+} //end Greet
 
 /*
 DISCOS
