@@ -1,3 +1,10 @@
+/*
+LJ - Lawrence Joa(Steve and John) and Joshua Gao(Batman)
+APCS
+HW12 -- On Elder Individuality and the Elimination of Radio Fuzz / Creating unique greetings with additional method setHelloMsg
+2021-10-05
+*/
+
 public class Greet {
 	public static void main(String[] args){
 		String greeting;
@@ -27,3 +34,12 @@ public class Greet {
 		System.out.println(greeting);
 	}
 }
+
+/*
+DISCOS
+- richard becomes an instance within BigSib, able to use it to invoke methods in BigSib
+
+UNRESOLVED MYSTERIES
+
+
+*/
