@@ -14,7 +14,7 @@ public class BigSib{
 		helloMsg = r;
 	}
 
-	public static String greet(String s){
+	public String greet(String s){
 		return helloMsg + " " + s;
 	}
 }
