@@ -8,12 +8,13 @@ HW13 -- Where do BigSibs Come From? / Adding a constructor
 
 public class Greet{
 	public static void main(String[] args){
+
 		BigSib richard = new BigSib("Word up");
 		String greeting = richard.greet("freshman");
 		System.out.println(greeting);
 
-		BigSib doctor = new BigSib("Salutations");
-		greeting = doctor.greet("Dr. Spaceman");
+		BigSib richard = new BigSib("Salutations");
+		greeting = richard.greet("Dr. Spaceman");
 		System.out.println(greeting);
 
                 BigSib kong = new BigSib("Hey ya");
@@ -27,3 +28,10 @@ public class Greet{
 
 	}
 }
+
+
+/*
+DISCOS
+- Able to create an instance variable with initial value when using 'new BigSib'
+*/
+
