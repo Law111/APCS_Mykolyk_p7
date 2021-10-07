@@ -11,5 +11,19 @@ public class Greet{
 		BigSib richard = new BigSib("Word up");
 		String greeting = richard.greet("freshman");
 		System.out.println(greeting);
+
+		BigSib doctor = new BigSib("Salutations");
+		greeting = doctor.greet("Dr. Spaceman");
+		System.out.println(greeting);
+
+                BigSib kong = new BigSib("Hey ya");
+                greeting = kong.greet("Kong Fooey");
+                System.out.println(greeting);
+
+                BigSib son = new BigSib("Sup");
+                greeting = son.greet("mom");
+                System.out.println(greeting);
+
+
 	}
 }
