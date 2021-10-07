@@ -5,7 +5,6 @@ HW13 -- Where do BigSibs Come From? / Adding a constructor
 2021-10-06
 */
 
-
 public class Greet{
 	public static void main(String[] args){
 
@@ -24,11 +23,8 @@ public class Greet{
                 BigSib son = new BigSib("Sup");
                 greeting = son.greet("mom");
                 System.out.println(greeting);
-
-
 	}
 }
-
 
 /*
 DISCOS
