@@ -19,7 +19,7 @@ public class Greet{
                 System.out.println(greeting);
                 greeting = kong.greet("Kong Fooey");
                 System.out.println(greeting);
-                greeting = Son.greet("mom");
+                greeting = son.greet("mom");
                 System.out.println(greeting);
 	}
 }
