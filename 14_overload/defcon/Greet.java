@@ -1,3 +1,4 @@
+
 /*
 LJR - Lawrence Joa(Steve and John), Joshua Gao(Batman), and Ruby Friedman(Tiffany)
 APCS
@@ -23,9 +24,3 @@ public class Greet{
                 System.out.println(greeting);
 	}
 }
-
-/*
-DISCOS
--so
-QCC
-*/
