@@ -23,3 +23,9 @@ public class Greet{
                 System.out.println(greeting);
 	}
 }
+/*
+DISCOS
+- default constructor "public BigSib()" takes no params
+- overloaded constructor same class name, diff params
+QCC
+*/
