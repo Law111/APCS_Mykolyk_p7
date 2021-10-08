@@ -23,3 +23,9 @@ public class Greet{
                 System.out.println(greeting);
 	}
 }
+
+/*
+DISCOS
+-so
+QCC
+*/
