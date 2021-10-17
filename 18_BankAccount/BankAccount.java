@@ -1,54 +1,62 @@
 /*
-Trio number int x (Orion Roven(Von Geburt), May Qiu(Perry Jr.), Lawrence Joa(Steve, John)
-
+Trio number int x (Orion Roven(Von Geburt), May Qiu(Perry Jr.), Lawrence Joa(Steve, John))
 APCS
-HW18_BankAccount (use UML diagram)
+HW18 -- CPA-One / BankAccount.java code
 10/15/21
 */
 
-
 public class BankAccount {
-        private static String acctHolder;
-        private static String password;
-        private static int pin;
-        private static int accountNum;
-        private static double bal;
+    private String acctHolder;
+    private String password;
+    private int pin;
+    private int accountNum;
+    private double bal;
 
-        public BankAccount(String name, String pw, int PinInput, int acctNum, double startBal){
-                acctHolder=name;
-                password = pw;
-                pin=PinInput;
-                accountNum=acctNum;
-                bal=startBal;
-        }
+    public void SetAcctInfo(String name, String pw, int PinInput, int acctNum, double startBal){
+        acctHolder=name;
+        password=pw;
+        pin=PinInput;
+        accountNum=acctNum;
+        bal=startBal;
+    }
 
+    public void DepositMoney(double paycheck){
+        bal= bal + paycheck;
+    }
 
-        public static void PrintInfo(){
-                System.out.println("account holder: "+acctHolder);
-                System.out.println("password: "+password);
-                System.out.println("pin: "+pin);
-                System.out.println("account number: "+accountNum);
-                System.out.println("balance: $"+bal);
-        }
+    public void WithdrawMoney(double moneySpent){
+        bal= bal - moneySpent;
+    }
 
-	public void deposit(double money){
-		bal = bal + money;
-	}
-	public void withdraw(double money){
-		bal = bal - money;
-	}
+    public static void PrintInfo(String accttholder, String password, int pin, int accountNum, int bal, double paycheck, double moneySpent){
+                BankAccount myDuck = new BankAccount();
 
-        public static void main(String[] args){
-                BankAccount myDuck = new BankAccount("Von Geburt", "nunyazbizniz", 3217, 448921, 1);
-                myDuck.PrintInfo();
-		myDuck.deposit(500);
-		myDuck.PrintInfo();
-		myDuck.withdraw(1200);
-		myDuck.PrintInfo();
-        }
+                myDuck.SetAcctInfo("Von Geburt","nunyazbizniz",3217,448921,1);
+                myDuck.DepositMoney(.05);
+                myDuck.WithdrawMoney(.5);
+
+                System.out.println("account holder: "+myDuck.acctHolder);
+                System.out.println("password: "+myDuck.password);
+                System.out.println("pin: "+myDuck.pin);
+                System.out.println("account number: " +myDuck.accountNum);
+                if (myDuck.bal==1) {
+                    System.out.println("balance: "+myDuck.bal+" dollar");
+                } else {
+                    System.out.println("balance: "+myDuck.bal+ " dollars");
+                }
+    }
+    public static void main(String[] args){
+        PrintInfo("Von Geburt", "nunyazbizniz", 3217, 448921, 1, .05, .5);
+    }
 }
 
 
 /*
-This is alternate code for the hw, apparently not allowed(for now?) because cannot create static variables
+DISCO:
+main must be static
+in order to maintain proper pluraity of the word dollar, we can use an if else statement that checks if bal==1
+if we say if (bal==1){//do stuff} then we get an error saying nonstatic variable bal cannot be referenced in a static context
+we can fix this by saying if (myDuck.bal==1){//do stuff}, because myDuck.bal is static
+QCC:
+if main has to reference SetAcct, and SetAcct has to reference acctHolder, than wouldn't acctHolder have to be a static instance variable (it works if it is)
 */
