@@ -31,20 +31,20 @@ public class BankAccount {
                 System.out.println("balance: $"+bal);
         }
 
-	public void deposit(double money){
-		bal = bal + money;
-	}
-	public void withdraw(double money){
-		bal = bal - money;
-	}
+        public void deposit(double money){
+                bal = bal + money;
+        }
+        public void withdraw(double money){
+                bal = bal - money;
+        }
 
         public static void main(String[] args){
                 BankAccount myDuck = new BankAccount("Von Geburt", "nunyazbizniz", 3217, 448921, 1);
                 myDuck.PrintInfo();
-		myDuck.deposit(500);
-		myDuck.PrintInfo();
-		myDuck.withdraw(1200);
-		myDuck.PrintInfo();
+                myDuck.deposit(500);
+                myDuck.PrintInfo();
+                myDuck.withdraw(1200);
+                myDuck.PrintInfo();
         }
 }
 
@@ -52,3 +52,4 @@ public class BankAccount {
 /*
 This is alternate code for the hw, apparently not allowed(for now?) because cannot create static variables
 */
+
