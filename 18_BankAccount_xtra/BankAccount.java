@@ -1,8 +1,7 @@
 /*
 Trio number int x (Orion Roven(Von Geburt), May Qiu(Perry Jr.), Lawrence Joa(Steve, John)
-
 APCS
-HW18_BankAccount (use UML diagram)
+HW18 -- CPA-One / BankAccount.java code
 10/15/21
 */
 
