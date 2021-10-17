@@ -59,4 +59,7 @@ if we say if (bal==1){//do stuff} then we get an error saying nonstatic variable
 we can fix this by saying if (myDuck.bal==1){//do stuff}, because myDuck.bal is static
 QCC:
 if main has to reference SetAcct, and SetAcct has to reference acctHolder, than wouldn't acctHolder have to be a static instance variable (it works if it is)
+
+Q2:
+Q3:
 */
