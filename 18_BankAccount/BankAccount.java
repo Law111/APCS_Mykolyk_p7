@@ -61,5 +61,5 @@ if main has to reference SetAcct, and SetAcct has to reference acctHolder, than 
 
 Q2: Before we create a default constructor and use BankAccount myDuck = new BankAccount();, we are creating an instance variable myDuck.
 Because we can make an instance variable with no arguments we know that there is a default constructor.
-Q3: Assuming that a String representation of an object means (String object), then we could use System.out.prinln(String myDuck), because myDuck is an object.
+Q3: Assuming that a String representation of an object means (String object), then we could use System.out.println(String myDuck), because myDuck is an object.
 */
