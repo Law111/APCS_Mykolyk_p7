@@ -18,6 +18,10 @@ public class BankAccount {
         pin=PinInput;
         accountNum=acctNum;
         bal=startBal;
+        if(accountNum<100000000 || accountNum>999999998){
+   		accountNum = 999999999;
+   		System.out.println("Must be 9 digit account number");
+        }
     }
 
     public void DepositMoney(double paycheck){
@@ -31,7 +35,7 @@ public class BankAccount {
     public static void PrintInfo(String accttholder, String password, int pin, int accountNum, int bal, double paycheck, double moneySpent){
                 BankAccount myDuck = new BankAccount();
 
-                myDuck.SetAcctInfo("Von Geburt","nunyazbizniz",3217,448921,1);
+                myDuck.SetAcctInfo("Von Geburt","nunyazbizniz",3217,448922391,1);
                 myDuck.DepositMoney(.05);
                 myDuck.WithdrawMoney(.5);
 
@@ -46,7 +50,7 @@ public class BankAccount {
                 }
     }
     public static void main(String[] args){
-        PrintInfo("Von Geburt", "nunyazbizniz", 3217, 448921, 1, .05, .5);
+        PrintInfo("Von Geburt", "nunyazbizniz", 3217, 448922391, 1, .05, .5);
     }
 }
 
@@ -59,7 +63,8 @@ we can fix this by saying if (myDuck.bal==1){//do stuff}, because myDuck.bal is 
 QCC:
 if main has to reference SetAcct, and SetAcct has to reference acctHolder, than wouldn't acctHolder have to be a static instance variable (it works if it is)
 
-Q2: Before we create a default constructor and use BankAccount myDuck = new BankAccount();, we are creating an instance variable myDuck.
+Q2: Before we create a default constructor and use BankAccount myDuck = new BankAccount();, we are creating an object myDuck in class BankAccount().
 Because we can make an instance variable with no arguments we know that there is a default constructor.
 Q3: Assuming that a String representation of an object means (String object), then we could use System.out.println(String myDuck), because myDuck is an object.
+System.out.println(myDuck.<any instance var that is a string>);
 */
