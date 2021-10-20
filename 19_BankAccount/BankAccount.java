@@ -60,7 +60,6 @@ public class BankAccount {
 
         public static void main(String[] args){
 		BankAccount myDuck = new BankAccount();
-
         	myDuck.SetAcctInfo("Von Geburt","nunyazbizniz",3217,448922391,1);
         	myDuck.DepositMoney(.05);
         	myDuck.WithdrawMoney(.5);
