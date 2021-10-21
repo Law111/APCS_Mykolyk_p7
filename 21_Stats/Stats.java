@@ -12,9 +12,7 @@
    We imported java.util.* to use Math methods
  **/
 import java.util.*;
-
 public class Stats {
-
   public static int mean(int a, int b) {
     return (a+b)/2;
   }
@@ -62,5 +60,5 @@ public class Stats {
   public static double geoMean(double a, double b, double c) {
     return Math.pow((a*b*c),(1.0/3.0));
   }
-
+  
 }//end class
