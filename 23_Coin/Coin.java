@@ -1,4 +1,5 @@
 /***
+ Blue Sushi - Lawrence Joa, XinQing Lin
  APCS
  HW23 -- What Does Equality Look Like? / Coding Coin & Driver files
  2021-10-22
