@@ -2,7 +2,13 @@
  APCS
  HW23 -- What Does Equality Look Like? / Coding Coin & Driver files
  2021-10-22
- time spent: 1.5
+ time spent: 1.5 hours
+
+ DISCO
+ Math.random() provides a value in the interval [0.0, 1.0). We can use Math.random() in problems involving probability.
+
+ QCC
+ How or when are we supposed to use reset(str, str)?
  ***/
 
 import java.util.*;
