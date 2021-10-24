@@ -125,7 +125,7 @@ public class Coin {
     double value = 0.0;
     upFace = s;
     name = "";
-  	bias = 0.5;
+    bias = 0.5;
     headsCtr=0;
     tailsCtr=0;
     flipCtr=0;
