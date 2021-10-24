@@ -152,7 +152,7 @@ public class Coin {
       tailsCtr ++;
       upFace = "tails";
     }
-	  return upFace;
+    return upFace;
   }
 
 
