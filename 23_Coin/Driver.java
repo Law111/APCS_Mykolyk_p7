@@ -28,7 +28,7 @@ public class Driver {
       //test 2nd overloaded constructor
       Coin wayne = new Coin( "dollar", "heads" );
 
-      /*//test toString() methods of each Coin
+      //test toString() methods of each Coin
       System.out.println("mine: " + mine);
       System.out.println("yours: " + yours);
       System.out.println("wayne: " + wayne);
@@ -47,10 +47,8 @@ public class Driver {
       else {
         System.out.println( "No match. Firestarter you can not be." );
       }
-
-      ====================BOTTOM======================*/
+      //====================BOTTOM======================
 
   }//end main()
 
 }//end class
-
