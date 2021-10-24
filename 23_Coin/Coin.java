@@ -122,10 +122,13 @@ public class Coin {
       postcond: Coin's attribs reset to starting vals
   ***/
   public void reset( String s, double d ) {
+    double value = 0.0;
     upFace = s;
+    name = "";
   	bias = 0.5;
     headsCtr=0;
     tailsCtr=0;
+    flipCtr=0;
   }
 
 
