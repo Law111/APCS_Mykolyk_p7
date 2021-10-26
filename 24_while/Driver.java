@@ -9,8 +9,11 @@ public class Driver {
 		    yours.flip();
 		    wayne.flip();
 	  }
-    System.out.println(yours.headsCtr); // check # of times yours was heads
-    System.out.println(wayne.headsCtr); // check # of times wayne was heads
+    System.out.println("-------Test1-------");
+    System.out.println("yours: " + yours);
+    System.out.println("wayne: " + wayne);
+    System.out.println("yours' head count: " + yours.headsCtr); // check # of times yours was heads
+    System.out.println("wayne's head count: " + wayne.headsCtr); // check # of times wayne was heads
 
 	  yours.reset("heads", 0.5);
 	  wayne.reset("heads", 0.5);
@@ -23,7 +26,10 @@ public class Driver {
           match++; // check if match = y
         }
     }
-    System.out.println(match);
+    System.out.println("-------Test2-------");
+    System.out.println("yours: " + yours);
+    System.out.println("wayne: " + wayne);
+    System.out.println("match count: " + match);
 
 	  yours.reset("heads", 0.5);
 	  wayne.reset("heads", 0.5);
@@ -35,7 +41,10 @@ public class Driver {
           match2++;
 		    }
     }
-    System.out.println(match2); // check if match2 suits >65536 and %2005==0
+    System.out.println("-------Test3-------");
+    System.out.println("yours: " + yours);
+    System.out.println("wayne: " + wayne);
+    System.out.println("match2 count: " + match2); // check if match2 suits >65536 and %2005==0
   }//end main()
 
 }//end class
