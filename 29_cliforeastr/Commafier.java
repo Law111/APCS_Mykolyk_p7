@@ -6,7 +6,8 @@ public class Commafier{
     for(int i=xyz.length()-1;i>=0;i--){
       ans=xyz.substring(i,i+1)+ans;
       ctr++;
-      if (ctr%3==0){
+
+      if (xyz.length()!=3 && ctr%3==0){
         ans=","+ans;
       }
     }
@@ -15,5 +16,6 @@ public class Commafier{
   public static void main(String [] args){
     System.out.println(commafyF(1000));
     System.out.println(commafyF(12872178));
+    System.out.println(commafyF(100));
   }
 }
