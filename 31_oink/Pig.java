@@ -49,7 +49,6 @@ public class Pig
     return false;
   }//end hasA()
 
-
   /*=====================================
     boolean isAVowel(String) -- tells whether a letter is a vowel
     precondition: letter.length() == 1
@@ -61,7 +60,6 @@ public class Pig
     }
     return false;
   }
-
 
   /*=====================================
     int countVowels(String) -- counts vowels in a String
@@ -81,7 +79,6 @@ public class Pig
     return ctr;
   }
 
-
   /*=====================================
     boolean hasAVowel(String) -- tells whether a String has a vowel
     pre:  w != null
@@ -95,7 +92,6 @@ public class Pig
     }
     return false;
   }
-
 
   /*=====================================
     String allVowels(String) -- returns vowels in a String
