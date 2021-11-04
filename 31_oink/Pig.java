@@ -115,7 +115,6 @@ public class Pig
     return ans;
   }
 
-
   public static void main( String[] args )
   {
     System.out.println(hasA("cat", "p"));
