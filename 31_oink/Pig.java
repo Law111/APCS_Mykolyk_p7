@@ -26,7 +26,6 @@
  *      then develop and test one method at a time.
  *      NEVER STRAY TOO FAR FROM COMPILABILITY/RUNNABILITY!
  ***/
-
 public class Pig
 {
   //Q: How does this initialization make your life easier?
@@ -118,7 +117,5 @@ public class Pig
     System.out.println(countVowels("banana"));
     System.out.println(hasAVowel("fly"));
     System.out.println(allVowels("chocolate"));
-
   }//end main()
-
 }//end class Pigs
