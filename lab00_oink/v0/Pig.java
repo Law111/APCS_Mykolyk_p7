@@ -90,11 +90,11 @@ public class Pig {
     hasAVowel("zzz") -> false
     **/
   	public static boolean hasAVowel( String w ){
-    	if (countVowels(w)>0) {
-      	return true;
-    	} else {
-    		return false;
-      }
+        if (countVowels(w)>0) {
+      	     return true;
+    	  } else {
+    		     return false;
+        }
   	}
 
 
@@ -111,7 +111,7 @@ public class Pig {
 
           	if ( isAVowel( w.substring(i,i+1) ) )
             ans += w.substring( i, i+1 ); //grow the return String
-        		}
+        }
 
         return ans;
     }
@@ -129,7 +129,7 @@ public class Pig {
     		String ans = "";
 
     		if ( hasAVowel(w) ) //Q: Why this necess?
-      ans = allVowels(w).substring(0,1);
+            ans = allVowels(w).substring(0,1);
 
     		return ans;
   	}
@@ -142,7 +142,7 @@ public class Pig {
     beginsWithVowel("strong") --> false
     **/
   	public static boolean beginsWithVowel( String w ) {
-    		return isAVowel( w.substring(0,1) );
+        return isAVowel( w.substring(0,1) );
   	}
 
 
@@ -153,12 +153,18 @@ public class Pig {
     engToPig("strong") --> "ongstray"
     engToPig("java")   --> "avajay"
     **/
-		public static String engToPig( String w ) {
+    public static String engToPig( String w ) {
 
         String ans = "";
 
-        if ( beginsWithVowel(w) )
+        if (beginsWithVowel(w)) {
         		ans = w + "way";
+        }
+
+      	if (firstVowel(w).equals("y")){
+            int vPos = w.indexOf( firstVowel(w) );
+            ans = w.substring(vPos + 1) + w.substring(0,vPos + 1) + "ay";
+        }
 
         else {
           	int vPos = w.indexOf( firstVowel(w) );
@@ -174,20 +180,20 @@ public class Pig {
     post: isPunc(".") -> true
           isPunc("b") -> false
     =====================================*/
-/*  public static boolean isPunc( String symbol ) {
-return PUNCS.indexOf( symbol ) != -1;
+  public static boolean isPunc( String symbol ) {
+      return PUNCS.indexOf( symbol ) != -1;
   }
-*/
+
   /*=====================================
     boolean isUpperCase(String) -- tells whether a letter is uppercase
     pre:  letter.length() == 1
     post: isUpperCase("a") -> false
           isUpperCase("A") -> true
     =====================================*/
-/*  public static boolean isUpperCase( String letter ) {
-
+  public static boolean isUpperCase( String letter ) {
+      return CAPS.indexOf(letter) != -1;
   }
-*/
+
 
   /*=====================================
     boolean hasPunc(String) -- tells whether a String contains punctuation
@@ -195,10 +201,16 @@ return PUNCS.indexOf( symbol ) != -1;
     post: hasPunc("cat.") -> true
           hasPunc("cat") -> false
     =====================================*/
-/*  public static boolean hasPunc( String w ) {
-
+  public static boolean hasPunc( String w ) {
+      boolean punc = false;
+      for(int i=0; i<w.length(); i++){
+          if(PUNCS.indexOf(w.substring(i,i+1)) != -1){
+              punc = true;
+          }
+      }
+      return punc;
   }
-*/
+
 
   /*=====================================
     boolean beginsWithUpper(String) -- tells whether 1st letter is uppercase
@@ -206,11 +218,11 @@ return PUNCS.indexOf( symbol ) != -1;
     post: beginsWithUpper("Apple") -> true
           beginsWithUpper("apple") -> false
     =====================================*/
-/*  public static boolean beginsWithUpper( String w ) {
+  public static boolean beginsWithUpper( String w ) {
 
-return isUpperCase(w.substring(0,1) );
+      return isUpperCase(w.substring(0,1) );
   }
-*/
+
 
 		public static void main( String[] args ) {
 
@@ -220,6 +232,9 @@ return isUpperCase(w.substring(0,1) );
       		System.out.println( "countVowels \t" + countVowels(word) );
       		System.out.println( "engToPig \t" + engToPig(word) );
       		System.out.println( "---------------------" );
+          System.out.println(isPunc(","));
+          System.out.println(isUpperCase("A"));
+          System.out.println(hasPunc("hajowtj."));
     		}
 
   	}//end main()
