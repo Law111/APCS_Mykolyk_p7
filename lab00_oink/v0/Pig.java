@@ -1,9 +1,17 @@
 /***
  * Noobies - Lawrence Joa(Steve, John), Ivina Wang (Sealie), Jacc Chen (Large)
  * APCS
- * L00:
+ * L00
  * 2021-11-08
- * time spent:
+ * time spent: 1hr
+ *
+ * DISCOS
+ * If String begins with y, then the y is not considered a vowel
+ * EX: yay -> ayyay
+ *
+ * QCC
+ * How do you translate a word with an apostrophe?(')
+ *
  *
  * class Pig
  * a Pig Latin translator
@@ -161,7 +169,7 @@ public class Pig {
         		ans = w + "way";
         }
 
-      	if (firstVowel(w).equals("y")){
+      	if (w.substring(0,1).equals("y")){
             int vPos = w.indexOf( firstVowel(w) );
             ans = w.substring(vPos + 1) + w.substring(0,vPos + 1) + "ay";
         }
