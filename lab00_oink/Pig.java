@@ -3,7 +3,7 @@
  * APCS
  * L00
  * 2021-11-09
- * time spent: 0.5hr
+ * time spent: 3hr
  *
  * DISCO:
  * DemoScanner.java has a functionality similar to $ cat
