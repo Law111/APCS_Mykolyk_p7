@@ -2,15 +2,40 @@
  * Noobies - Lawrence Joa(Steve, John), Ivina Wang (Sealie), Jacc Chen (Large)
  * APCS
  * L00
- * 2021-11-08
- * time spent: 1hr
+ * 2021-11-09
+ * time spent: 0.5hr
  *
- * DISCOS
- * If String begins with y, then the y is not considered a vowel
- * EX: yay -> ayyay
+ * DISCO:
+ * DemoScanner.java has a functionality similar to $ cat
+ * To process a plaintext file using DemoScanner(after javac), you type java DemoScanner < <locationOfFile>/words.in
+ * (from piazza)
+ * There are two redirector commands, < and >- < redirects the terminal to look at the standard input stream of the file
+ *																						> redirects the terminal to look at the standard output stream of the file
+ * For the DemoScanner, when you put in an odd number of input you get an error, and when you
+ * add in an even number of inputs you do not get an error
+ *
  *
  * QCC
  * How do you translate a word with an apostrophe?(')
+ * Using v1 and testing java Pig hi!!, it printed out the piglatin version of the
+ * previous commands in terminal
+ *
+ * HOW WE UTILIZED SCANNER DEMO (v2):
+ * We copied the DemoScanner file and tested it with the words.in file to fin
+ * We pasted the DemoScanner in the main method, and edited it to fit
+ *
+ * WHAT CAUSES THE RUNTIME ERROR IN THE SCANNER DEMO:
+ * Scanner is trying to take in a non-existent input from the word.in file
+ *
+ * NEW IN v1:
+ * Fufilled all of the general rules
+ * Can handle multiple consonants at the beginnning of the word
+ * Can handle capitalization (to a certain extent; like the beginning of a word, or
+ * if it is in the middle of the sentence, but it cannot do both)
+ * Can handle punctuation and hyphens
+ *
+ * NEW IN v2:
+ * Added scanner
  *
  *
  * class Pig
@@ -30,6 +55,7 @@
  *      NEVER STRAY TOO FAR FROM COMPILABILITY/RUNNABILITY!
  ***/
 
+import java.util.Scanner;
 
 public class Pig {
 
@@ -178,6 +204,14 @@ public class Pig {
           	int vPos = w.indexOf( firstVowel(w) );
           	ans = w.substring(vPos) + w.substring(0,vPos) + "ay";
         }
+        if(isUpperCase(w.substring(0,1))){
+          ans = ans.toLowerCase();
+            ans = (char)(ans.charAt(0) - 32) + ans.substring(1);
+        }
+
+        if(hasPunc(w)){
+          ans = engToPig(w.substring(0,w.length()-1)) + w.substring(w.length()-1);
+        }
 
         return ans;
     }
@@ -231,18 +265,35 @@ public class Pig {
       return isUpperCase(w.substring(0,1) );
   }
 
+	public static String pigSentence(String w){
+			int startLetter=0;
+			String pigSentence = "";
+			for(int i=0; i<w.length()-1;i++){
+					if(w.substring(i,i+1).equals(" ")){
+							pigSentence = pigSentence + engToPig(w.substring(startLetter,i)) + " ";
+							startLetter = i + 1;
+					}
+          if(w.substring(i,i+1).equals("-")){
+							pigSentence = pigSentence + engToPig(w.substring(startLetter,i)) + "-";
+							startLetter = i + 1;
+					}
+			}
+			if(w.substring(w.length()-1).equals(" ")){
+					pigSentence = pigSentence + engToPig(w.substring(startLetter,w.length()-1));
+			} else {
+          pigSentence = pigSentence + engToPig(w.substring(startLetter,w.length()));
+      }
+      return pigSentence;
+	}
+
 
 		public static void main( String[] args ) {
+        Scanner sc = new Scanner(System.in);
+        while(sc.hasNext()){
+            String s = sc.nextLine();
+            System.out.print(s + " --> ");
+            System.out.println(pigSentence(s));
 
-    		for( String word : args ) {
-      		System.out.println( "allVowels \t" + allVowels(word) );
-      		System.out.println( "firstVowels \t" + firstVowel(word) );
-      		System.out.println( "countVowels \t" + countVowels(word) );
-      		System.out.println( "engToPig \t" + engToPig(word) );
-      		System.out.println( "---------------------" );
-          System.out.println(isPunc(","));
-          System.out.println(isUpperCase("A"));
-          System.out.println(hasPunc("hajowtj."));
     		}
 
   	}//end main()
