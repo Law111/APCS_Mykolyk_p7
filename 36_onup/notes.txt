@@ -1,5 +1,8 @@
 Lawrence Joa
-Thinkjava Debugging
+APCS
+HW36 -- Thinkjava Debugging / notes for java errors and tips on debugging code
+2021-11-18
+time spent: 0.5hrs
 
 ------------ Compile Time Error -------------
 
