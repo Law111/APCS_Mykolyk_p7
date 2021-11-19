@@ -1,0 +1,33 @@
+Lawrence Joa
+Thinkjava Debugging
+
+------------ Compile Time Error -------------
+
+# of error messages != # of actual errors in program
+Error message tells where compiler was when error occurred, not the error itself
+When assigning variables, check that both sides have same type
+Same for invoking methods
+
+Debugging by bisection
+	-Delete about half of code then compile
+	-If compile successful, add half of deleted code
+	-If unsuccessful, delete half of remaining code
+	-Repeat lines 1-3, eventually should find error
+	-Add back code incrementally afterward
+
+Sometimes, compiler gives an error, but may suggest wrong/unreliable feedback
+
+--------------- Runtime Error ---------------
+
+Good tip for runtime errors is to add print statements in program; helps show flow of execution
+"hanging" often means stuck in infinite loop/recursion
+infinite recursion often returns StackOverflowError
+exception message: name of exception; line occurred; stack trace
+NullPointerException: attempt to access inst var or invoke method on object that is null(Ex: initial values of arrays)
+ArrayIndexOutOfBoundsException: index being accessed is negative or greater than array.length-1
+ArithmeticException: error during arithmetic operation(Ex: divide by 0)
+
+---------------- Logic Error ----------------
+
+Should probably never use == when using doubles
+== checks identity, equals method checks equivalence
