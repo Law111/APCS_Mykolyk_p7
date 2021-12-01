@@ -1,3 +1,13 @@
+/*
+  Yat Long Chan, Lawrence Joa, Joshua Gao.
+  APCS pd7
+  HW41 -- Be Rational -- Creating methods for rational numbers
+  2021-12-01
+  DISCOs
+
+  QCCs
+*/
+
 public class Rational{
   private int numerator;
   private int denominator;
