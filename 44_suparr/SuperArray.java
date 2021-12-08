@@ -1,7 +1,7 @@
 // LYJ: Lawrence Joa, Yat Long Chan, Joshua Gao
 // APCS1 pd7
 // HW44 -- expanding SuperArray functionality, encapsulation
-// 2021-12-08
+// 2021-12-07
 // Time spent: 0.3 hours
 
 /***************************
