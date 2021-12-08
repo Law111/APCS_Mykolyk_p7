@@ -1,7 +1,16 @@
-// Clyde "Thluffy" Sinclair
-// APCS1 pd0
+// LYJ: Lawrence Joa, Yat Long Chan, Joshua Gao
+// APCS1 pd7
 // HW44 -- expanding SuperArray functionality, encapsulation
-// 2021-12-08w
+// 2021-12-08
+// Time spent: 0.3 hours
+
+/***************************
+ DISCO
+ - Backward iteration is useful for moving items in an array to the right
+
+ QCC
+ - none
+ ***************************/
 
 /***************************
  * class SuperArray version 2.0
@@ -83,6 +92,7 @@ public class SuperArray
   //inserts an item at index
   public void add( int index, int newVal )
   {
+    _size ++;
     for(int i=_size; i>index; i--){
       _data[i]=_data[i-1];
     }
@@ -104,7 +114,7 @@ public class SuperArray
   //return number of meaningful items in _data
   public int size()
   {
-    /* YOUR IMPLEMENTATION HERE */
+    return _size;
   }
 
 
@@ -112,7 +122,7 @@ public class SuperArray
   //main method for testing
   public static void main( String[] args )
   {
-    /*~~~~~~~~move~me~down~~~~~~~~~~~~~~V~~~~~~~~
+
       SuperArray curtis = new SuperArray();
       System.out.println( "Printing empty SuperArray curtis..." );
       System.out.println( curtis );
@@ -161,6 +171,7 @@ public class SuperArray
       mayfield.add(1,77);
       System.out.println("Printing SuperArray mayfield post-insert...");
       System.out.println(mayfield);
+      /*~~~~~~~~move~me~down~~~~~~~~~~~~~~V~~~~~~~~
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|~~~~~~~~*/
   }//end main()
 
