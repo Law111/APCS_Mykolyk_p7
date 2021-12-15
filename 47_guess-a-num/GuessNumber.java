@@ -1,8 +1,8 @@
-// Clyde "Thluffy" Sinclair
-// APCS pd0
-// HW47 -- ?
+// LYJ: Lawrence Joa, Yat Long Chan, Joshua Gao
+// APCS pd7
+// HW47 -- Guess Again
 // 2021-12-15w
-// time spent: _ hrs
+// time spent: 0.2 hrs
 
 /***
  * class GuessNumber -- fun fun fun!
@@ -21,7 +21,9 @@
 
 /***
     DISCO:
+    - break; to exit loop, return; to exit a method as a whole.
     QCC:
+    - none
  ***/
 import java.util.Scanner;
 
@@ -44,10 +46,8 @@ public class GuessNumber
     _lo = Math.min(a,b);
     _hi = Math.max(a,b);
     _guessCtr = 1;
+    _target = (int) (Math.random() * (_hi - _lo + 1)) + _lo;
 
-    _target = Math.random(_lo-1, _hi+1);
-
-    /* YOUR CODE HERE */
   }
 
 
@@ -61,21 +61,25 @@ public class GuessNumber
     int guess = sc.nextInt();
 
     if(guess==_target){
-      System.out.println("Correct! It took " _guessCtr + " guesses");
+      System.out.println("Correct! It took " + _guessCtr + " guesses");
       return;
     }
-    else if(guess>_target){
-      _hi=guess-1;
+
+    if(guess > _target){
+      if (guess <= _hi){
+        _hi = guess - 1;
+      }
       System.out.println("Too high!");
-      PlayRec();
+      _guessCtr ++;
+      playRec();
     } else{
-      _lo=guess+1;
+      if (guess >= _lo) {
+        _lo = guess + 1;
+      }
       System.out.println("Too low!");
-      PlayRec();
+      _guessCtr ++;
+      playRec();
     }
-
-
-    /* YOUR CODE HERE */
   }
 
 
@@ -92,9 +96,20 @@ public class GuessNumber
       System.out.print("Guess a num bt " + _lo + " & " + _hi + ": ");
       guess = sc.nextInt();
 
-      //3 cases: we either found it, too hi, too lo
-
-      /* YOUR CODE HERE */
+      if (guess == _target){
+        System.out.println("Correct! It took " + _guessCtr + " guesses");
+        break;
+      } else if (guess > _target){
+        if (guess <= _hi){
+          _hi = guess - 1;
+        }
+        System.out.println("Too high!");
+      } else {
+        if (guess >= _lo) {
+          _lo = guess + 1;
+        }
+        System.out.println("Too low!");
+      }
 
       _guessCtr++;
     }
@@ -105,19 +120,19 @@ public class GuessNumber
   public void play()
   {
     //use one or the other below:
-    //playRec();
-    playIter();
+    playRec();
+    //playIter();
   }
 
 
   //main method to run it all
   public static void main( String[] args )
   {
-    /*-----------------------------
     //instantiate a new game
     GuessNumber g = new GuessNumber(1,100);
     //start the game
     g.play();
+    /*-----------------------------
     -----------------------------*/
   }
 
