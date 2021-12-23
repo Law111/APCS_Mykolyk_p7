@@ -1,11 +1,12 @@
 /*
   Yat Long Chan, Lawrence Joa, Joshua Gao.
   APCS pd7
-  HW42 -- Be More Rational -- Creating more methods for rational numbers
-  2021-12-02
-  Time spent: 0.5 hours (class time)
+  HW42 -- Rational Standards Compliance -- equals() and compareTo()
+  2021-12-21
+  Time spent: 0.5 hours + class time
   DISCOs
-  nothing new
+   - Use cross product to compare two rationals as they are exact values.
+   - Floating point value will not be as accurate as it is an approximation.
   QCCs
   none
 */
@@ -80,18 +81,21 @@ public class Rational implements Comparable{
      this.denominator = this.denominator / tempGCD;
   }
 
-  public int compareTo(Object o){
-    if(o instanceof Rational){
-      Rational r = (Rational)o;
-      int greater = 0;
-
-       if (this.numerator * r.denominator > this.denominator * r.numerator){
-        return 1;
-      } else if (this.numerator * r.denominator < this.denominator * r.numerator){
-        return -1;
-      }
-      return greater;
+  public int compareTo(Object other){
+    if (other instanceof Rational) {
+      Rational r = (Rational) other;
+      //use cross multiplication
+      return (this.numerator * r.denominator) - (this.denominator * r.numerator);
     }
-    return 0;
+    throw new ClassCastException("\n CompareTo() input not a Rational");
+  }
+
+  public boolean equals(Object other) {
+    if (other instanceof Rational) {
+      Rational r = (Rational) other;
+      // check if values are equal
+      return this.compareTo(r) == 0;
+    }
+    return false;
   }
 }
