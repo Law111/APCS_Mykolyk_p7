@@ -2,7 +2,7 @@
   Yat Long Chan, Lawrence Joa, Joshua Gao.
   APCS pd7
   HW42 -- Rational Standards Compliance -- equals() and compareTo()
-  2021-12-21
+  2021-12-22
   Time spent: 0.5 hours + class time
   DISCOs
    - Use cross product to compare two rationals as they are exact values.
@@ -85,7 +85,7 @@ public class Rational implements Comparable{
     if (other instanceof Rational) {
       Rational r = (Rational) other;
       //use cross multiplication
-      return (this.numerator * r.denominator) - (this.denominator * r.numerator);
+      return ( (this.numerator * r.denominator) - (this.denominator * r.numerator) ) * this.denominator * r.denominator;
     }
     throw new ClassCastException("\n CompareTo() input not a Rational");
   }
