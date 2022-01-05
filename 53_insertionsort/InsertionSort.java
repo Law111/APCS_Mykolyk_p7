@@ -87,7 +87,7 @@ public class InsertionSort
     }
   }//end insertionSortV
 
-  
+
   // ArrayList-returning insertionSort
   // postcondition: order of input ArrayList's elements unchanged
   //                Returns sorted copy of input ArrayList.
@@ -129,7 +129,6 @@ public class InsertionSort
       /*===============for VOID methods=============
       ============================================*/
 
-    /*==========for AL-returning methods==========
       System.out.println( "*** Testing non-void version... *** " );
       ArrayList glen = new ArrayList<Integer>();
       glen.add(7);
@@ -150,6 +149,7 @@ public class InsertionSort
       + cocoSorted );
       System.out.println( "\nArrayList coco after sorting:\n" + coco );
       System.out.println( coco );
+      /*==========for AL-returning methods==========
       ============================================*/
 
   }//end main
