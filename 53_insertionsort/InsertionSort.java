@@ -1,6 +1,6 @@
 // Fred Gang: Joseph Othman, Michael Kamela, Lawrence Joa
 // APCS pd07
-// HW52 -- implementing selection sort
+// HW53 -- implementing insertion sort
 // 2022-01-05w
 // time spent:  0.3hrs
 
