@@ -64,17 +64,18 @@ public class StatPrinter
   //          _frequency.get(i) returns frequency of i in data
   //eg, for data [2,3,2,5,2,3]
   //  _frequency would be [0,0,3,2,0,1]
+
+  //Run time efficiency: O(n^2)
   public StatPrinter( ArrayList <Integer> data )
   {
-    /* YOUR IMPLEMENTATION HERE */
     for(int i=0; i<max(data)+1; i++){
-      int counter =0;
+      Integer counter = 0;
       for(int j=0; j<data.size(); j++){
-        if(data.get(j)==i){
+        if(data.get(j).equals(i)){
           counter++;
         }
-        _frequency.add(counter);
       }
+      _frequency.add(counter);
     }
   }
 
@@ -82,6 +83,8 @@ public class StatPrinter
   //*************** QUESTION 01 **************************
   //precond:  data.size() > 0
   //postcond: returns largest integer in data
+
+  //Run time efficiency: O(n)
   public Integer max( ArrayList <Integer> data )
   {
     int max = 0;
@@ -103,6 +106,8 @@ public class StatPrinter
   //    isLocalMode(0) -> false
   //    isLocalMode(1) -> true
   //    isLocalMode(5) -> true
+
+  //Run time efficiency: O(1)
   public boolean isLocalMode( int i )
   {
     /* YOUR IMPLEMENTATION HERE */
@@ -121,17 +126,37 @@ public class StatPrinter
 
   //*************** QUESTION 04 **************************
   //postcond: returns list of modes in _frequency
+
+  //Run time efficiency: O(n)
   public ArrayList<Integer> getLocalModes()
   {
+    ArrayList<Integer> localModes = new ArrayList<Integer>();
+    for(int i=0; i<_frequency.size(); i++){
+      if(isLocalMode(i)){
+        localModes.add(_frequency.get(i));
+      }
+    }
     /* YOUR IMPLEMENTATION HERE */
-    return _frequency;
+    return localModes;
   }
 
 
   //*************** QUESTION 05 **************************
   //precond:  longestBar > 0
+
+  //Run time efficiency: O(n^2)
   public void printHistogram( int longestBar )
   {
+    long proportion = max(_frequency)/longestBar;
+    for(int i=0; i<_frequency.size(); i++){
+      System.out.print(i + " : ");
+      for(int j=_frequency.get(i); j>0; j-= proportion){
+        System.out.print("*");
+      }
+      System.out.println();
+    }
+
+
     /* YOUR IMPLEMENTATION HERE */
   }
 
