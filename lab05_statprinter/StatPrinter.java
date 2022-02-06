@@ -1,8 +1,8 @@
-// Clyde "Thluffy" Sinclair
-// APCS pd0
+// Watermelon (Lea Kwok, Nina Jiang, Lawrence Joa)
+// APCS pd7
 // L05 -- pulling it together
 // 2022-02-03r
-// time spent:  hrs
+// time spent: 1.5 hrs
 
 
 /**
@@ -66,8 +66,10 @@ public class StatPrinter
   //  _frequency would be [0,0,3,2,0,1]
 
   //Run time efficiency: O(n^2)
+
   public StatPrinter( ArrayList <Integer> data )
   {
+    _frequency = new ArrayList<Integer>();
     for(int i=0; i<max(data)+1; i++){
       Integer counter = 0;
       for(int j=0; j<data.size(); j++){
@@ -79,6 +81,9 @@ public class StatPrinter
     }
   }
 
+  public ArrayList<Integer> returnFreq(){
+    return _frequency;
+  }
 
   //*************** QUESTION 01 **************************
   //precond:  data.size() > 0
@@ -111,7 +116,7 @@ public class StatPrinter
   public boolean isLocalMode( int i )
   {
     /* YOUR IMPLEMENTATION HERE */
-    if((i<=0) || i>_frequency.size() -1){
+    if((i<=0) || i>=_frequency.size() -1){
       return false;
     }
     if(_frequency.get(i)<_frequency.get(i-1)){
@@ -145,12 +150,12 @@ public class StatPrinter
   //precond:  longestBar > 0
 
   //Run time efficiency: O(n^2)
-  public void printHistogram( int longestBar )
+  public void printHistogram( double longestBar )
   {
-    long proportion = max(_frequency)/longestBar;
+    double proportion = max(_frequency)/longestBar;
     for(int i=0; i<_frequency.size(); i++){
       System.out.print(i + " : ");
-      for(int j=_frequency.get(i); j>0; j-= proportion){
+      for(double j=_frequency.get(i); j>0.00001; j-= proportion){
         System.out.print("*");
       }
       System.out.println();
