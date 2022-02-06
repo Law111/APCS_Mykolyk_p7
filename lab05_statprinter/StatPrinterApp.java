@@ -1,8 +1,8 @@
-// Clyde "Thluffy" Sinclair
-// APCS pd0
+// Watermelon (Lea Kwok, Nina Jiang, Lawrence Joa)
+// APCS pd7
 // L05 -- pulling it together
-// 2022-02-03r
-// time spent:  hrs
+// 2022-02-06
+// time spent: 1.5 hrs
 
 /***
  * class StatPrinterApp
