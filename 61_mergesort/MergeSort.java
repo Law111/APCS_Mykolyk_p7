@@ -1,8 +1,20 @@
 /***
+Watermelon (Nina Jiang, Lawrence Joa)
+APCS pd7
+HW61: Instructions so Simple...
+2022-02-08
+time spent: 0.6 hr
+
   class MergeSort
   Implements mergesort on array of ints.
 
   Summary of Algorithm:
+  Take 2 sorted int arrays
+  Initialize an int array with length of sum of the 2 arrays (finalArr)
+  Compare first elements of both arrays
+  If element of 1st array <= 2nd array element, add 1st array element to finalArr and move index+1
+  If element of 2nd array is < 1st array element, add 2nd array element to finalArr and move index+1
+  If either array reaches the end, add the rest of the other array to finalArr
 
   ***/
 
