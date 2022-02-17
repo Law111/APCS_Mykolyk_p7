@@ -1,3 +1,9 @@
+// Watermelon (Lea Kwok, Nina Jiang, Lawrence Joa)
+// APCS pd7
+// HW65 -- How Many Queens Can a Thinker Place, If a Thinker Can Place Queens...
+// 2022-02-16
+// time spent: 00.8 hrs
+
 /***
  * class QueenBoard
  * Generates solutions for N-Queens problem.
@@ -31,6 +37,9 @@ public class QueenBoard
    */
   public boolean solve()
   {
+    if(solveH(0)){
+        return true;
+    }
     return false;
   }
 
@@ -40,10 +49,19 @@ public class QueenBoard
    */
   private boolean solveH( int col )
   {
-    for(int i=0; i<size; i++){
-      if(_board[i][col]){
+    if(col == _board.length){
+        return true;
+    }
 
-      }
+    for(int row = 0; row < _board.length; row++){
+        if(addQueen(row, col)){
+            if(solveH(col+1)){
+                return true;
+            }
+
+            removeQueen(row, col);
+
+        }
 
     }
     return false;
@@ -57,6 +75,23 @@ public class QueenBoard
         all negs and 0's replaced with underscore
         all 1's replaced with 'Q'
     */
+    String ans = "";
+    for( int r = 0; r < _board.length; r++ ) {
+      for( int c = 0; c < _board[0].length; c++ ) {
+        if(_board[r][c] <= 0){
+            ans += "_"+"\t";
+        }
+        else if(_board[r][c] == 1){
+            ans += "Q"+"\t";
+        }
+        else{
+            ans += _board[r][c]+"\t";
+        }
+      }
+      ans += "\n";
+    }
+    System.out.println(ans);
+
   }
 
 
@@ -141,7 +176,7 @@ public class QueenBoard
   public static void main( String[] args )
   {
     QueenBoard b = new QueenBoard(5);
-    System.out.println(b);
+    // System.out.println(b);
     /** should be...
        0	0	0	0	0
        0	0	0	0	0
@@ -150,9 +185,9 @@ public class QueenBoard
        0	0	0	0	0
     */
 
-    b.addQueen(3,0);
+    /* b.addQueen(3,0);
     b.addQueen(0,1);
-    System.out.println(b);
+    System.out.println(b); */
     /** should be...
        0	1	-1	-2	-1
        0	0	-2	0	0
@@ -161,8 +196,8 @@ public class QueenBoard
        0	-1	0	0	0
     */
 
-    b.removeQueen(3,0);
-    System.out.println(b);
+    /* b.removeQueen(3,0);
+    System.out.println(b); */
     /** should be...
        0	1	-1	-1	-1
        0	0	-1	0	0
@@ -171,6 +206,33 @@ public class QueenBoard
        0	0	0	0	0
     */
 
+    System.out.println(b.solve());
+    b.printSolution();
+
+    //test 8
+    QueenBoard c = new QueenBoard(8);
+    System.out.println(c.solve());
+    c.printSolution();
+
+    //test 9
+    QueenBoard d = new QueenBoard(9);
+    System.out.println(d.solve());
+    d.printSolution();
+
+    //test 11
+    QueenBoard e = new QueenBoard(11);
+    System.out.println(e.solve());
+    e.printSolution();
+
+    //test 13
+    QueenBoard f = new QueenBoard(13);
+    System.out.println(f.solve());
+    f.printSolution();
+
+    //test 20
+    QueenBoard g = new QueenBoard(20);
+    System.out.println(g.solve());
+    g.printSolution();
   }
 
 }//end class
