@@ -64,9 +64,9 @@ public class KnightTour
 
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     //for random starting location, use lines below:
-    //int startX = //YOUR MATH CONSTRUCT FOR GENERATING A RANDOM LEGAL X VALUE
-    //int startY = //YOUR MATH CONSTRUCT FOR GENERATING A RANDOM LEGAL X VALUE
-    //tf.findTour( startX, startY, 1 );   // 1 or 0 ?
+    int startX = (int)Math.random() * n;//YOUR MATH CONSTRUCT FOR GENERATING A RANDOM LEGAL X VALUE
+    int startY = (int)Math.random() * n;//YOUR MATH CONSTRUCT FOR GENERATING A RANDOM LEGAL X VALUE
+    tf.findTour( startX, startY, 1 );   // 1 or 0 ?
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -89,15 +89,15 @@ class TourFinder
   //constructor -- build board of size n x n
   public TourFinder( int n )
   {
-    _sideLength = ???
+    _sideLength = n;
 
     //init 2D array to represent square board with moat
-    _board =
+    _board = new int[_sideLength+4][_sideLength+4]();
 
     //SETUP BOARD --  0 for unvisited cell
     //               -1 for cell in moat
     //---------------------------------------------------------
-    ???
+    for(int i=0; i<)
     //---------------------------------------------------------
 
   }//end constructor
