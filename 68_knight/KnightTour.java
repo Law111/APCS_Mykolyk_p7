@@ -1,8 +1,8 @@
-// Clyde Sinclair
-// APCS pd0
+// Watermelon: Lea Kwok, Nina Jiang, Lawrence Joa
+// APCS pd7
 // HW68 -- recursively probing for a closed cycle
-// 2022-02-28m
-// time spent:  hrs
+// 2022-03-02
+// time spent: 1.5 hrs
 
 /***
  * SKELETON
@@ -20,12 +20,13 @@
  *
  * QCC
  *
- * Mean execution times for boards of size n*n:
- * n=5   0.124s    across __ executions
- * n=6   0.155s    across __ executions
- * n=7   0.093s    across __ executions
- * n=8   0.0096s    across __ executions
+ * Mean execution times(real time) for boards of size n*n:
+ * n=5   1.579s    across 5 executions
+ * n=6   20.198s    across 3 executions
+ * n=7   11min 16.567s    across 1 execution
+ * n=8   15min 7.039s    across 1 execution
  *
+ * Note: All executions were done from top left corner
  * POSIX PROTIP: to measure execution time from BASH, use time program:
  * $ time java KnightTour 5
  *
@@ -212,6 +213,7 @@ class TourFinder
       //If made it this far, path did not lead to tour, so back up...
       // (Overwrite number at this cell with a 0.)
         //???
+
         _board[x][y] = 0;
 
       System.out.println( this ); //refresh screen
