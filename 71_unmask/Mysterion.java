@@ -90,7 +90,9 @@ public class Mysterion
   /**
    * int mysterion(int[],int,int,int)
    * DESCRIP
-   *
+   * array is split between all values less than c and all values more than c
+   * a and b are the bound in which the splitting occurs
+   * new name: arrLessGreaterSplit
    * @param arr
    * @param a
    * @param b
