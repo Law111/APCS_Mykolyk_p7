@@ -161,7 +161,7 @@ public class Mysterion
       System.out.println("arr6: ");
       printArr(arr6);
       mysterion(arr6,0,9,testC2);
-      System.out.println("after mysterion w/ a=0,b=4,c="
+      System.out.println("after mysterion w/ a=0,b=9,c="
       + testC2 +"...");
       printArr(arr6);
     }
