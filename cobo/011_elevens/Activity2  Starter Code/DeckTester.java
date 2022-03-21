@@ -8,6 +8,25 @@ public class DeckTester {
 	 *	@param args is not used.
 	 */
 	public static void main(String[] args) {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+		String[] ranks = {"ace", "king", "queen", "jack"};
+		String [] suits = {"spade", "heart"};
+		int[] pointValues = {1, 2, 3, 4};
+		Deck a = new Deck(ranks, suits, pointValues);
+		System.out.println("toString: " + a.toString());
+		System.out.println("isEmpty: " + a.isEmpty());
+		System.out.println("size: " + a.size());
+		System.out.println("deal: " + a.deal());
+		System.out.println("toString: " + a.toString());
+		System.out.println("isEmpty: " + a.isEmpty());
+		System.out.println("size: " + a.size());
+		System.out.println("deal: " + a.deal());
+		System.out.println("deal: " + a.deal());
+		System.out.println("deal: " + a.deal());
+		System.out.println("deal: " + a.deal());
+		System.out.println("deal: " + a.deal());
+		System.out.println("deal: " + a.deal());
+		System.out.println("toString: " + a.toString());
+		System.out.println("isEmpty: " + a.isEmpty());
+		System.out.println("size: " + a.size());
 	}
 }

@@ -32,7 +32,7 @@ public class Deck {
 	public Deck(String[] ranks, String[] suits, int[] values) {
 		cards = new ArrayList<Card>();
  		for(int i = 0; i < suits.length; i++) {
-			for(int j=0; j<ranks.length; j++){
+			for(int j=0; j < ranks.length; j++){
 				cards.add(new Card(ranks[j], suits[i], values[j]));
 			}
 		}
@@ -73,8 +73,8 @@ public class Deck {
 		if(cards.isEmpty()){
 			return null;
 		}
-		Card hi = cards.get(0);
-		cards.remove(0);
+		size --;
+		Card hi = cards.get(size);
 		return hi;
 	}
 
