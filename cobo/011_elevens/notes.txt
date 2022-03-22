@@ -33,3 +33,39 @@ Q2: public static boolean arePermutations(int x[], int y[]){
 }
 
 Q3: Any 4 length array is possible because it sorts randomly.
+
+Activity 6:
+Q1: 5, 4, 2, 6, A, J, K, 5, 2
+
+You can only take out a (5,6), as there are no other pairs summing 11 nor
+is there a JQK triplet.
+
+Q2: In order to win, yes you will need a JQK triplet since you can only take out
+pairs for the A-10 cards, so even then you would have 1 remaining card unable to be removed.
+
+Q3: No, it's based on cards in the deck and its order.
+
+Activity7:
+Q1:
+Variables: deck, dealer, set of 9 cards, paired cards
+
+Q2: Look at first card, check if A-10, if so check rest of cards to see whether
+it adds to 11. Otherwise look for J Q and K. If no pair/triplet, check next card
+until 2nd last index. If paired up, remove those cards, take 2 dealed cards from deck,
+and reset back at first card. Otherwise the game is lost. If there are no cards
+left on the deck and on the board, the game is won.
+
+Q3: Yes
+
+Q4a: It is used in constructor and at start of new game
+4b: Should be called in isLegal and anotherPlayIsPossible
+4c: [J,6,null,2,null,null,A,4,null] --> [J,6,2,A,4]
+4d:
+public static void printCards(ElevensBoard board){
+  List<Integer> cIndexes = board.cardIndexes();
+  for(int i=0; i<board.size; i++){
+    System.out.print(cIndexes.get(i) +  " ");
+  }
+}
+4e: isLegal since you don't want to be comparing null values. Also, anotherPlayIsPossible
+already calls for isLegal so you don't need cardIndexes in that as well
