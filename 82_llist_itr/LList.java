@@ -1,3 +1,9 @@
+// Rowing Lemurs and Leopards (Ruby Friedman, Lindsay Phung, Lawrence Joa)
+// APCS pd7
+// HW82 -- Roll Your Own Iterator
+// 2022-03-28m
+// time spent: 0.5 hr
+
 /***
  * class LList v6
  * Implements a linked list of DLLNodes.
@@ -152,9 +158,9 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
 
 
   //return an Iterator over this list
-  public/* YOUR CODE HERE */
+  public Iterator<T> iterator()
   {
-    /* YOUR CODE HERE */
+    return new MyIterator();
   }
 
   //--------------------------------------------------------
@@ -254,7 +260,8 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
     //constructor
     public MyIterator()
     {
-      /* YOUR CODE HERE */
+      _dummy = _head;
+      _okToRemove = false;
     }
 
     //-----------------------------------------------------------
@@ -262,14 +269,21 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
     //return true if iteration has more elements.
     public boolean hasNext()
     {
-      /* YOUR CODE HERE */
+      if (_dummy.getNext() != null) {
+        _okToRemove = true;
+        return true;
+      }
+      _okToRemove = false;
+      return false;
     }
 
 
     //return next element in this iteration
     public T next()
     {
-      /* YOUR CODE HERE */
+      DLLNode<T> call = _dummy.getNext();
+      _dummy.setNext(call.getNext());
+      return call.getCargo();
     }
 
 
@@ -278,7 +292,14 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
     //               (...so that hasNext() will not crash)
     public void remove()
     {
-            /* YOUR CODE HERE */
+      T temp;
+      hasNext();
+      if (_okToRemove) {
+        temp = _dummy.getCargo();
+        _dummy = _dummy.getNext();
+      }
+      //System.out.println(temp);
+      _size--;
     }
     //--------------^  Iterator interface methods  ^-------------
     //-----------------------------------------------------------
@@ -289,49 +310,36 @@ public class LList<T> implements List<T> //Q: Why no "implements Iterable" ?
   //main method for testing
   public static void main( String[] args )
   {
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     LList james = new LList();
-
     System.out.println("initially: " );
     System.out.println( james + "\tsize: " + james.size() );
-
     james.add("beat");
     System.out.println( james + "\tsize: " + james.size() );
-
     james.add("a");
     System.out.println( james + "\tsize: " + james.size() );
-
     james.add("need");
     System.out.println( james + "\tsize: " + james.size() );
-
     james.add("I");
     System.out.println( james + "\tsize: " + james.size() );
-
     System.out.println( "2nd item is: " + james.get(1) );
-
     System.out.println( "...and now 2nd item is: " + james.set(1,"got") );
     System.out.println( james + "\tsize: " + james.size() );
-
     james.add(0,"whut");
     System.out.println( "...after add(0,whut): " );
     System.out.println( james + "\tsize: " + james.size() );
-
     james.add(4,"phat");
     System.out.println( "...after add(4,phat): " );
     System.out.println( james + "\tsize: " + james.size() );
-
     System.out.println( "...after remove last: "
                         + james.remove( james._size-1) );
     System.out.println( james + "\tsize: " + james.size() );
-
     System.out.println( "...after remove(0): " + james.remove(0) );
     System.out.println( james + "\tsize: " + james.size() );
-
     System.out.println( "...after remove(0): " + james.remove(0) );
     System.out.println( james + "\tsize: " + james.size() );
-
     System.out.println( "...after remove(0): " + james.remove(0) );
     System.out.println( james + "\tsize: " + james.size() );
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
   }//end main()
 
