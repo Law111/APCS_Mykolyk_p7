@@ -1,1 +1,0 @@
-# APCS_Mykolyk_p7
