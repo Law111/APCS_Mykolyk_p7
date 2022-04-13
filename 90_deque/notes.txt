@@ -15,3 +15,4 @@ QCC
 * Wouldn't it be more efficient to just have peekFirst() and peekLast() methods in
   the API than to include getFirst() and getLast()?
 * How can we create a toString for a deque?
+* What does it mean for an iterator to have its elements in proper sequence?
