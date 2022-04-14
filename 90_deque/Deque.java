@@ -1,9 +1,9 @@
 /*
 Rowing Lemurs and Leopards (Ruby Friedman, Lindsay Phung, Lawrence Joa)
 APCS pd7
-HW90 -- Swabbing the Deque / double ended queue
-2022-04-13w
-time spent: 1.0 hrs
+HW91 -- Deque the Halls / double ended queue
+2022-04-14r
+time spent: 0.5 hrs
 */
 
 import java.util.Iterator;
@@ -52,6 +52,4 @@ public interface Deque<CARD> {
 
   //Removes the last occurrence of the specified element from this deque
   public boolean removeLastOccurrence(Object c);
-  /*
-  */
 }

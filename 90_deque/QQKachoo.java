@@ -1,9 +1,9 @@
 /*
 Rowing Lemurs and Leopards (Ruby Friedman, Lindsay Phung, Lawrence Joa)
 APCS pd7
-HW90 -- Swabbing the Deque / double ended queue
-2022-04-13w
-time spent: 1.0 hrs
+HW91 -- Deque the Halls / double ended queue
+2022-04-14r
+time spent: 0.5 hrs
 */
 
 import java.util.LinkedList;
@@ -41,27 +41,27 @@ public class QQKachoo<D> implements Deque<D> {
   public int size() {
     return _deque.size();
   }
-  public boolean contains(Object c){
+  public boolean contains(Object c) {
     return _deque.contains(c);
   }
 
-  public Iterator<D> iterator(){
+  public Iterator<D> iterator() {
     return _deque.iterator();
   }
 
-  public boolean addAll(Collection<D> c){
+  public boolean addAll(Collection<D> c) {
     return _deque.addAll(c);
   }
 
-  public Iterator<D> descendingIterator(){
+  public Iterator<D> descendingIterator() {
     return _deque.descendingIterator();
   }
 
-  public boolean removeFirstOccurrence(Object c){
+  public boolean removeFirstOccurrence(Object c) {
     return _deque.removeFirstOccurrence(c);
   }
 
-  public boolean removeLastOccurrence(Object c){
+  public boolean removeLastOccurrence(Object c) {
     return _deque.removeLastOccurrence(c);
   }
 
