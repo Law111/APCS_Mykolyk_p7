@@ -14,4 +14,3 @@ public class CelebrityRunner
 		CelebrityGame game = new CelebrityGame();
 	}
 }
-CelebrityRunner.java (END)
