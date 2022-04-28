@@ -8,11 +8,11 @@ public class Celebrity
 	/**
 	 * The clue to determine the celebrity
 	 */
-	
+	 private String Clue;
 	/**
 	 * The answer or name of the celebrity.
 	 */
-	
+	 private String Answer;
 	/**
 	 * Creates a Celebrity instance with the supplied answer and clue
 	 * @param answer
@@ -20,6 +20,8 @@ public class Celebrity
 	 */
 	public Celebrity(String answer, String clue)
 	{
+		this.Clue=clue;
+		this.Answer=answer;
 	}
 
 	/**
@@ -28,7 +30,7 @@ public class Celebrity
 	 */
 	public String getClue()
 	{
-		return null;
+		return Clue;
 	}
 
 	/**
@@ -37,7 +39,7 @@ public class Celebrity
 	 */
 	public String getAnswer()
 	{
-		return null;
+		return Answer;
 	}
 
 	/**
@@ -46,7 +48,7 @@ public class Celebrity
 	 */
 	public void setClue(String clue)
 	{
-		
+		Clue=clue;
 	}
 
 	/**
@@ -55,16 +57,16 @@ public class Celebrity
 	 */
 	public void setAnswer(String answer)
 	{
-		
+		Answer=answer;
 	}
-	
+
 	/**
 	 * Provides a String representation of the Celebrity.
 	 */
 	@Override
 	public String toString()
 	{
-		return null;
+		return Answer;
 	}
-	
+
 }
