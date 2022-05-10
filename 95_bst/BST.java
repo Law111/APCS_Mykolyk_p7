@@ -125,6 +125,17 @@ public class BST
   //~~~~~~~~~~~~~^~~TRAVERSALS~~^~~~~~~~~~~~~~~~~~~~~~
   //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+  public TreeNode search(int target){
+
+  }
+
+  public int height(){
+
+  }
+
+  public int numLeaves(){
+    
+  }
 
   //main method for testing
   public static void main( String[] args )
