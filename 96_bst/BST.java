@@ -126,6 +126,76 @@ public class BST
   //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
+      /*****************************************************
+       * TreeNode search(int)
+       * returns pointer to node containing target,
+       * or null if target not found
+       *****************************************************/
+      public TreeNode search( int target )
+      {
+      	/*** YOUR IMPLEMENTATION HERE ***/
+        return searchHelp( _root, target);
+      }
+
+      public TreeNode searchHelp(TreeNode currNode, int target){
+        if (currNode == null){
+          return null;
+        }
+        if(currNode.getValue() < target){
+          return searchHelp(currNode.getRight(), target);
+        }
+        else if(currNode.getValue() > target){
+          return searchHelp(currNode.getLeft(), target);
+        }
+        else {
+          return currNode;
+        }
+      }
+
+
+
+      /*****************************************************
+       * int height()
+       * returns height of this tree (length of longest leaf-to-root path)
+       * eg: a 1-node tree has height 1
+       *****************************************************/
+      public int height()
+      {
+      	/*** YOUR IMPLEMENTATION HERE ***/
+        return heightHelp(_root);
+      }
+
+      public int heightHelp(TreeNode currNode){
+        if(currNode == null){
+          return 0;
+        } else {
+          return Math.max(heightHelp(currNode.getLeft()), heightHelp(currNode.getRight()))+1;
+        }
+      }
+
+
+      /*****************************************************
+       * int numLeaves()
+       * returns number of leaves in tree
+       *****************************************************/
+      public int numLeaves()
+      {
+      	/*** YOUR IMPLEMENTATION HERE ***/
+        return numLeavesHelp(_root);
+      }
+
+      public int numLeavesHelp(TreeNode currNode){
+        if(currNode == null){
+          return 0;
+        }
+        if(currNode.getLeft()==null && currNode.getRight()==null){
+          return 1;
+        } else {
+          return numLeavesHelp(currNode.getLeft()) + numLeavesHelp(currNode.getRight());
+        }
+      }
+
+
   //main method for testing
   public static void main( String[] args )
   {
@@ -154,6 +224,19 @@ public class BST
       System.out.println( "post-order traversal:" );
       arbol.postOrderTrav();
 
+      System.out.println( "\n-----------------------------");
+
+      System.out.println("Testing search");
+      for(int i=1; i<=6; i++){
+        System.out.println(arbol.search(i).getValue());
+      }
+      System.out.println(arbol.search(420));
+      System.out.println( "\n-----------------------------");
+      System.out.println("Testing height");
+      System.out.println(arbol.height());
+      System.out.println( "\n-----------------------------");
+      System.out.println("Testing numLeaves");
+      System.out.println(arbol.numLeaves());
       System.out.println( "\n-----------------------------");
       /*~~~~~~~~~~~~move~me~down~~~~~~~~~~~~~~~~~~~~~~
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/

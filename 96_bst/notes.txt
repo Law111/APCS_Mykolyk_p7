@@ -14,6 +14,7 @@ DISCO
 
 QCC
 ------------------------------------------------
+* Seemed best/very helpful to add helper methods for search, height, and numLeaves
 ================================================
 
 
