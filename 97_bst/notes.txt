@@ -1,0 +1,25 @@
+Team Cookie (Justin Mohabir, Lawrence Joa, Lior Polischouk)
+APCS pd7
+HW97 -- Prune Your Tree
+2022-05-11
+time spent: 1.5 hrs
+
+
+DISCO
+------------------------------------------------
+* Inorder traversals should in theory print the binary tree in order
+* We must use the setLeft and setRight methods to set new TreeNodes, the = operator does not work
+* 4 cases to look at when implementing remove node for TREE
+* removed node has no children, has only left child, has only right child, has both
+================================================
+
+
+QCC
+------------------------------------------------
+* Seemed best/very helpful to add helper methods for search, height, and numLeaves
+================================================
+
+
+1. a perfect binary tree has 2^h-1 nodes
+2. at each level, a perfect binary tree has 2^(L-1) nodes
+3. height of a complete binary tree w/ n nodes is log base 2 (n) rounded up
