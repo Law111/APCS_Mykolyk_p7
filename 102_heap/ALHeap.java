@@ -65,6 +65,9 @@ public class ALHeap
   public void add( Integer addVal )
   {
     _heap.add(addVal);
+    while(minOf(addVal,(_heap.get(_heap.indexOf(((addVal)-1)/2)))==addVal && (_heap.indexOf(addVal)-1)>=0){
+      swap(_heap.indexOf(addVal),_heap.indexOf(((addVal)-1)/2));
+    }
   }//O(?)
 
 
@@ -77,6 +80,7 @@ public class ALHeap
    */
   public Integer removeMin()
   {
+
   }//O(?)
 
 
@@ -88,8 +92,14 @@ public class ALHeap
    */
   private int minChildPos( int pos )
   {
+    if(pos*2+1 > _heap.size()-1){
+      return -1;
+    }
+    else if(pos*2+1 > _heap.size()-1){
+      return pos*2+1;
+    } else {
     return _heap.indexOf(minOf(_heap.get(pos * 2 + 1), _heap.get(pos * 2 + 2)));
-  }//O(?)
+  }//O(1)?
 
 
   //~~~~~~~~~~~~~ aux helper fxns ~~~~~~~~~~~~~~
